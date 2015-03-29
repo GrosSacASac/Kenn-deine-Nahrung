@@ -1,0 +1,165 @@
+
+* {
+    /*to understand what happens, remove in production*/
+    /*border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    margin:0;
+    padding:0;*/
+}
+
+html, body, main {
+  height: 100%;
+  width: 100%;
+  font-size: 1.4rem;
+  background-color: #ddd;
+  background-image: url("../images/background/water.jpg");
+  background-repeat: no-repeat;
+    background-position: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+aside {
+  position: fixed;
+  background: pink;top: 0%;
+    z-index: 15;
+    right: 0%;
+}
+
+.gimg {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+}
+.foodImage:not(.hide) {
+    /*Make it appear*/
+    animation: 0.5s cubic-bezier(0, 1.17, 2.63, 3.15) 0s normal none 1 running appear;
+}
+
+
+@keyframes appear {
+    0% {
+        opacity:0;
+        margin-left:-2rem;
+    }
+    100% {
+        opacity:1;
+        margin-left:0;
+    }
+}
+
+.hide, #game1.hide, #game2.hide {/*css priority*/
+    display: none;
+}
+
+
+/*game 1*/
+
+#game1 {
+  flex-basis: 80vh;
+  order: 1;
+  flex-grow: 1;
+  /*background-color: #CF7373;*/
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+
+#game1 > h1 {
+  flex-basis: 1vh;
+  order: 1;
+  flex-grow: 1;
+    margin:0;
+}
+#game1 > #question {
+  flex-basis: 50vh;
+  order: 2;
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+#game1 > #question > label {
+    display:block;
+  height: 100%;
+}
+#game1 > #question img.gimg {
+  height: 95%;
+  max-width: 95vw;
+}
+
+#game1 > #input-zone {
+  flex-basis: 8vh;
+  order: 3;
+  flex-grow: 1;
+}
+
+#game1 > #input-zone > input{
+    font-family: Tahoma;
+  width: 99vw;
+  order: 3;
+  flex-grow: 1;
+}
+
+/*game2*/
+#game2 {
+  flex-basis: 80vh;
+  order: 1;
+  flex-grow: 1;
+  /*background-color: #CF7373;*/
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+
+#game2 > #question2 {
+  flex-basis: 10vh;
+  order: 1;
+  flex-grow: 1;
+}
+#game2 > #chooseImage {
+  flex-basis: 70vh;
+  order: 2;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+#game2 > #chooseImage > img.gimg {
+  /*flex-basis: 2%;*/
+  height: 15vh;
+  max-width: 95vw;
+  flex-grow: 0;
+}
+
+
+#feedback {
+    flex-basis: 20vh;
+  order: 2;
+  flex-grow: 1;
+  background-color: #b0a2a2;
+}
+
+#feedback > progress {
+    width: 99.9%;
+}
+
+#feedback > p {
+    margin:0;
+}
+
+button {
+    height:20vh;
+}
+.intro {
+    background-color:#e2e2e2;
+    background: transparent linear-gradient(to bottom, rgb(207, 231, 250) 0%, rgb(99, 147, 193) 100%) repeat scroll 0% 0%;
+}

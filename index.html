@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de" manifest="appcache.appcache">
+<head>
+    <meta charset="utf-8">
+    <title>Kenn deine Nahrung</title>    
+    <!-- correct display for new-age screens -->
+    <link rel="manifest" href="manifest.webapp">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+
+
+    <main>
+        <noscript><p>Sie müssen JavaScript zulassen um zu spielen.</p></noscript>
+        
+        <div data-99-node="tryAgain" class="intro">
+            <h1>Kenn deine Nahrungsmittel</h1>
+            <p data-99-node="tryAgainText"></p>
+            <p>Es gibt zwei Spiele:</p>
+            <ul>
+                <li><button data-99-bind="click-tryAgainGame1">Schreib den passenden Word zum Bild</button></li>
+                <li><button data-99-bind="click-tryAgainGame2">Wähle das passende Bild fürs Wort (Ideal für Smartphones)</button></li>
+            </ul>
+        </div>
+        
+        <section id="game1" class="hide" data-99-bind="keypress-check" data-99-node="game1">
+            <h1></h1>
+            
+            <section id="question">
+                <label for="input">
+                    <img class="foodImage gimg" data-99-node="foodImage" src="" alt="">
+                    <img class="foodImage hide gimg" data-99-node="foodImageBis" src="" alt="">
+                </label>
+            </section>
+            
+            <section id="input-zone">
+                <input data-99-var="input" data-99-node="input" id="input"
+                       type="text" autocomplete="off"
+                       inputmode="full-width-latin" 
+                       maxlength="100" minlength="2"
+                       placeholder="Wie nennst du dieses Essen ? Neue Zeile um zu bestätigen"
+                       spellcheck="false" autofocus
+                >
+                <button class="hide" data-99-bind="click-check">Check</button>
+            </section>
+            
+        </section>
+        
+        <section id="game2" class="hide" data-99-node="game2">
+            <section id="question2">
+                <strong>
+                    <span data-99-var="word"></span> ?
+                </strong>
+            </section>
+            
+            <section id="chooseImage" data-99-bind="click-check">
+                <img id="0" data-99-node="0" class="gimg" src="" alt="">
+                <img id="1" data-99-node="1" class="gimg" src="" alt="">
+                <img id="2" data-99-node="2" class="gimg" src="" alt="">
+                <img id="3" data-99-node="3" class="gimg" src="" alt="">
+            </section>
+        </section>
+        
+        <section id="feedback">
+            <p>
+                <strong><output title="Bewertung" data-99-var="feedback"></output></strong>
+            </p>
+
+            <progress data-99-node="progress" value="0" max="1" class=""></progress>
+        </section>
+        
+    </main>
+    
+    <aside>
+        <a title="A propos" href="html/about.html" target="_blank">[v0.1?]</a>
+    </aside>
+    
+<!-- imported libraries -->
+<script src="js/libraries/imports/ramda.js"></script>
+
+<!-- our libraries compiled to es5 -->
+<script src="jses5/libraries/operators.js"></script>
+<script src="jses5/libraries/js99.js"></script>
+<script src="jses5/libraries/dom99.js"></script>
+
+<!-- data -->
+<script src="jses5/data/data.js"></script>
+
+<!-- config 
+<script src="jses5/config/xxx.js"></script>-->
+
+<!-- programm -->
+<script src="jses5/source/ratio.js"></script>
+<script src="jses5/source/util.js"></script>
+<script src="jses5/source/game1.js"></script>
+<script src="jses5/source/game2.js"></script>
+<script src="jses5/source/main.js"></script>
+</body>
+</html>

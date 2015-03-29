@@ -1,0 +1,2 @@
+Reduce to 400x300 pixel
+Remove metadata

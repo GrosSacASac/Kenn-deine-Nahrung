@@ -1,0 +1,22 @@
+{
+    "version": "1.0",
+    "name": "Kenn deine Nahrung",
+    "short_name": "Nahrung",
+    "description": "Ein Spiel um Nahrungswörter zu lernen",
+    "launch_path": "/index.html",
+    "start_url": "/index.html",
+    "icons": {
+        "60": "/images/icons/60.png",
+        "128": "/images/icons/128.png",
+        "256": "/images/icons/256.png",
+        "512": "/images/icons/512.png"
+    },
+    "developer": {
+        "name": "Walle Cyril",
+        "url": "https://github.com/GrosSacASac"
+    },
+    "default_locale": "de",
+    "fullscreen": "true",
+    "appcache_path": "/appcache.appcache",
+    "orientation": [ "portrait" ]
+}

@@ -1,0 +1,56 @@
+CACHE MANIFEST
+# 1.0 
+# all files needed for offline use:
+index.html
+html/about.html
+css/normalize.css
+css/game.css
+js/libraries/imports/ramda.js
+
+# our libraries 
+jses5/libraries/operators.js
+jses5/libraries/js99.js
+jses5/libraries/dom99.js"></script>
+
+# data
+jses5/data/data.js
+
+# programm
+jses5/source/ratio.js
+jses5/source/util.js
+jses5/source/game1.js
+jses5/source/game2.js
+jses5/source/main.js
+
+# images
+#for i in range(1,30):
+#	print("images/food/" + str(i) +".jpg")
+images/food/1.jpg
+images/food/2.jpg
+images/food/3.jpg
+images/food/4.jpg
+images/food/5.jpg
+images/food/6.jpg
+images/food/7.jpg
+images/food/8.jpg
+images/food/9.jpg
+images/food/10.jpg
+images/food/11.jpg
+images/food/12.jpg
+images/food/13.jpg
+images/food/14.jpg
+images/food/15.jpg
+images/food/16.jpg
+images/food/17.jpg
+images/food/18.jpg
+images/food/19.jpg
+images/food/20.jpg
+images/food/21.jpg
+images/food/22.jpg
+images/food/23.jpg
+images/food/24.jpg
+images/food/25.jpg
+images/food/26.jpg
+images/food/27.jpg
+
+images/background/water.jpg
