@@ -1,5 +1,7 @@
 #Obst game
 
+[Try it in browser](http://rawgit.com/GrosSacASac/Kenn-deine-Nahrung/master/index.html)
+
 I started with this set-up: https://github.com/GrosSacASac/JavaScript-Set-Up
 
 ###License
