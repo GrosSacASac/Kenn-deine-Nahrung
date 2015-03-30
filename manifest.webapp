@@ -9,7 +9,11 @@
         "16": "/Kenn-deine-Nahrung/images/icons/16.png",
         "32": "/Kenn-deine-Nahrung/images/icons/32.png",
         "60": "/Kenn-deine-Nahrung/images/icons/60.png",
-        "128": "/Kenn-deine-Nahrung/images/icons/128.png"
+        "128": "/Kenn-deine-Nahrung/images/icons/128.png",
+        "144": "/Kenn-deine-Nahrung/images/icons/144.png",
+        "150": "/Kenn-deine-Nahrung/images/icons/150.png",
+        "256": "/Kenn-deine-Nahrung/images/icons/256.png",
+        "512": "/Kenn-deine-Nahrung/images/icons/512.png"
     }, 
     "developer": {
         "name": "Walle Cyril",
