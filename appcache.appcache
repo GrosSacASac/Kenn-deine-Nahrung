@@ -9,7 +9,7 @@ js/libraries/imports/ramda.js
 js/libraries/install.js
 jses5/libraries/operators.js
 jses5/libraries/js99.js
-jses5/libraries/dom99.js"></script>
+jses5/libraries/dom99.js
 jses5/data/data.js
 jses5/source/ratio.js
 jses5/source/util.js
