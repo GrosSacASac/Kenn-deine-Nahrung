@@ -3,8 +3,8 @@
     "name": "Kenn Nahrung",
     "short_name": "Nahrung",
     "description": "Ein Spiel um Nahrungswörter zu lernen",
-    "launch_path": "/index.html",
-    "start_url": "/index.html",
+    "launch_path": "/Kenn-deine-Nahrung/index.html",
+    "start_url": "/Kenn-deine-Nahrung/index.html",
     "icons": {
         "16": "/Kenn-deine-Nahrung/images/icons/16.png",
         "32": "/Kenn-deine-Nahrung/images/icons/32.png",
@@ -18,6 +18,6 @@
     "lang":"de",
     "default_locale": "de",
     "fullscreen": "true",
-    "appcache_path": "/appcache.appcache",
+    "appcache_path": "/Kenn-deine-Nahrung/appcache.appcache",
     "orientation": ["portrait"]
 }
