@@ -1,10 +1,11 @@
-// install
+// install, not working
 (function () {
+    "use strict";
     var registry,
         manifestPath = "/manifest.webapp";
     try {
         registry = window.navigator.mozApps;
-        if (!registry.checkInstalled(manifestPath)) {
+        if (!registry.checkInstalled(manifestPath).result) {
             registry.install(manifestPath);
         }
     }

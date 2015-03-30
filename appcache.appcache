@@ -6,6 +6,7 @@ html/about.html
 css/normalize.css
 css/game.css
 js/libraries/imports/ramda.js
+js/libraries/install.js
 jses5/libraries/operators.js
 jses5/libraries/js99.js
 jses5/libraries/dom99.js"></script>
