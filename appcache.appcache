@@ -6,25 +6,15 @@ html/about.html
 css/normalize.css
 css/game.css
 js/libraries/imports/ramda.js
-
-# our libraries 
 jses5/libraries/operators.js
 jses5/libraries/js99.js
 jses5/libraries/dom99.js"></script>
-
-# data
 jses5/data/data.js
-
-# programm
 jses5/source/ratio.js
 jses5/source/util.js
 jses5/source/game1.js
 jses5/source/game2.js
 jses5/source/main.js
-
-# images
-#for i in range(1,30):
-#	print("images/food/" + str(i) +".jpg")
 images/food/1.jpg
 images/food/2.jpg
 images/food/3.jpg
@@ -52,5 +42,8 @@ images/food/24.jpg
 images/food/25.jpg
 images/food/26.jpg
 images/food/27.jpg
-
 images/background/water.jpg
+
+# images
+#for i in range(1,30):
+#	print("images/food/" + str(i) +".jpg")
