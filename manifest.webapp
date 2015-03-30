@@ -1,50 +1,20 @@
 {
     "version": "1.0",
-    "name": "Kenn deine Nahrung",
+    "name": "Kenn Nahrung",
     "short_name": "Nahrung",
     "description": "Ein Spiel um Nahrungswörter zu lernen",
     "launch_path": "/index.html",
     "start_url": "/index.html",
-    "icons": [{
-        "src": "/images/icons/16.png",
-        "sizes": "16x16",
-        "type": "image/png"
+    "icons": {
+        "16": "/images/icons/16.png",
+        "32": "/images/icons/32.png",
+        "60": "/images/icons/60.png",
+        "128": "/images/icons/128.png",
+        "144": "/images/icons/144.png",
+        "150": "/images/icons/150.png",
+        "256": "/images/icons/256.png",
+        "512": "/images/icons/512.png"
     }, 
-    {
-        "src": "/images/icons/32.png",
-        "sizes": "32x32",
-        "type": "image/png"
-    }, 
-    {
-        "src": "/images/icons/60.png",
-        "sizes": "60x60",
-        "type": "image/png"
-    }, 
-    {
-        "src": "/images/icons/128.png",
-        "sizes": "128x128",
-        "type": "image/png"
-    }, 
-    {
-        "src": "/images/icons/144.png",
-        "sizes": "144x144",
-        "type": "image/png"
-    }, 
-    {
-        "src": "/images/icons/150.png",
-        "sizes": "150x150",
-        "type": "image/png"
-    }, 
-    {
-        "src": "/images/icons/256.png",
-        "sizes": "256x256",
-        "type": "image/png"
-    }, 
-    {
-        "src": "/images/icons/512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-    }], 
     "developer": {
         "name": "Walle Cyril",
         "url": "https://github.com/GrosSacASac"
