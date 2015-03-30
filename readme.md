@@ -1,4 +1,4 @@
-#Obst game
+#Kenn deine Nahrung
 
 [Try it in browser](http://rawgit.com/GrosSacASac/Kenn-deine-Nahrung/master/index.html)
 

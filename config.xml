@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id="com.github.nahrung"
+        version="1.0.0">
+    <name>Kenn deine Nahrung</name>
+    <description>
+        Ein Spiel um Nahrungswörter zu lernen.
+    </description>
+
+    <author href="https://github.com/GrosSacASac">
+        Walle Cyril
+    </author>
+    <preference name="orientation" value="portrait" />
+</widget>
