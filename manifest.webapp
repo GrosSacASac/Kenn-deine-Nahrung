@@ -6,10 +6,10 @@
     "launch_path": "/index.html",
     "start_url": "/index.html",
     "icons": {
-        "16": "/images/icons/16.png",
-        "32": "/images/icons/32.png",
-        "60": "/images/icons/60.png",
-        "128": "/images/icons/128.png"
+        "16": "/Kenn-deine-Nahrung/images/icons/16.png",
+        "32": "/Kenn-deine-Nahrung/images/icons/32.png",
+        "60": "/Kenn-deine-Nahrung/images/icons/60.png",
+        "128": "/Kenn-deine-Nahrung/images/icons/128.png"
     }, 
     "developer": {
         "name": "Walle Cyril",
