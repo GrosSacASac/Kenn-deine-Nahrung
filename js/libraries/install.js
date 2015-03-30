@@ -1,7 +1,7 @@
 // install
 (function () {
-    let registry;
-    const manifestPath = "/manifest.webapp";
+    var registry,
+        manifestPath = "/manifest.webapp";
     try {
         registry = window.navigator.mozApps;
         if (!registry.checkInstalled(manifestPath)) {
