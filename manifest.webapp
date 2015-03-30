@@ -9,10 +9,7 @@
         "16": "/images/icons/16.png",
         "32": "/images/icons/32.png",
         "60": "/images/icons/60.png",
-        "128": "/images/icons/128.png",
-        "144": "/images/icons/144.png",
-        "256": "/images/icons/256.png",
-        "512": "/images/icons/512.png"
+        "128": "/images/icons/128.png"
     }, 
     "developer": {
         "name": "Walle Cyril",
