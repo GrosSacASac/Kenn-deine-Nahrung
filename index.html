@@ -16,7 +16,7 @@
     <meta name="msapplication-square150x150logo" content="images/icons/150.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <script src="js/libraries/install.js"></script>
+    <!-- <script src="js/libraries/install.js"></script> -->
     
     <!-- preload -->
     <link rel="prerender" href="html/about.html">
@@ -35,6 +35,7 @@
                 <li><button data-99-bind="click-tryAgainGame1">Schreib den passenden Word zum Bild</button></li>
                 <li><button data-99-bind="click-tryAgainGame2">Wähle das passende Bild fürs Wort (Ideal für Smartphones)</button></li>
             </ul>
+            <a title="A propos" href="html/about.html" target="_blank" rel="next">[Hilfe]</a>
         </div>
         
         <section id="game1" class="hide" data-99-bind="keypress-check" data-99-node="game1">            
@@ -46,7 +47,10 @@
             </section>
             
             <section id="input-zone">
-                <input data-99-var="input" data-99-node="input" id="input"
+                <input data-99-var="input"
+                       data-99-node="input"
+                       data-99-bind="keyup-inputHelper"
+                       id="input"
                        type="text" autocomplete="off"
                        inputmode="full-width-latin" 
                        maxlength="100" minlength="2"
@@ -84,7 +88,7 @@
     </main>
     
     <aside>
-        <a title="A propos" href="html/about.html" target="_blank" rel="next">[v0.1?]</a>
+        <a title="A propos" href="html/about.html" target="_blank" rel="next">[Hilfe]</a>
     </aside>
     
 <!-- imported libraries -->
