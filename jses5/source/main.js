@@ -30,9 +30,11 @@
         lastTime = thisTime;
     };
 
-    /* note that keyup is used instead of input event so that the other input event has time to properly update JS99.vars.input */
+    /* note that JS99.vars.input is not used because it would maybe not be updated yet because it is updated for the same event.*/
     var inputHelper = function inputHelper(event) {
-        JS99.vars.input = UTIL.inputHelper(JS99.vars.input);
+        var newInput = UTIL.inputHelper(event.target.value);
+        // in case this was called second, we make sure everything is in sync
+        JS99.vars.input = newInput;
     };
 
     JS99.tryAgainGame1 = function () {

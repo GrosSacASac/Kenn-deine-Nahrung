@@ -152,5 +152,5 @@ var LANG = {
         gameOver: "Spiel zu Ende !",
         tryAgain: "Willst du noch einmal ?",
         thisWasTheRightImage: "Dies war das Richtige Bild",
-        "for": "für"
+        for_: "für"
     } };

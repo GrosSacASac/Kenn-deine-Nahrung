@@ -23,7 +23,7 @@ aside {
 }
 
 .gimg {
-    border-width: 2px;
+    border-width: 1px;
     border-color: black;
     border-style: solid;
 }
@@ -79,8 +79,8 @@ aside {
   height: 100%;
 }
 #game1 > #question img.gimg {
-  height: 95%;
-  max-width: 95vw;
+  height: 100%;
+  max-width: 99vw;
 }
 
 #game1 > #input-zone {
@@ -94,6 +94,7 @@ aside {
   width: 99vw;
   order: 3;
   flex-grow: 1;
+  margin-left:0.1rem;
 }
 
 /*game2*/

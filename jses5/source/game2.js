@@ -92,7 +92,7 @@ var GAME2 = (function () {
                     nodes[i].classList.add(hide);
                 }
             }, numberOfImages);
-            output.feedback = "" + UTIL.randomSelect(L.wrong) + " " + L.thisWasTheRightImage + " " + L["for"] + " " + UTIL.capitalize(DATA[dataIndex].name);
+            output.feedback = "" + UTIL.randomSelect(L.wrong) + " " + L.thisWasTheRightImage + " " + L.for_ + " " + UTIL.capitalize(DATA[dataIndex].name);
             ratios[dataIndex][1] += 1;
         }
     };
