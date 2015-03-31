@@ -51,8 +51,8 @@ var DATA = [{
 }, {
     image: "10.jpg",
     article: "w",
-    name: "süsskartoffel", // sz
-    alternatives: ["süsskartoffel", "süss kartoffel", "süss-kartoffel"]
+    name: "süßkartoffel",
+    alternatives: ["süsskartoffel", "süß kartoffel", "süß-kartoffel"]
 }, {
     image: "11.jpg",
     article: "m",
@@ -143,8 +143,9 @@ var DATA = [{
 var LANG = {
     de: {
         gladToSeeYou: "Super dass du da bist, welches Spiel willst du zuerst versuchen ?",
-        wellDone: ["Gut !", "Sehr schön.", "Du möchtest gerne ein Kompliment hören ?", "Du bist etwas ganz Besonderes!", "Super !"],
-        wrong: ["Falsch !", "Falsche Antwort", "Versuchs nochmal.", "Es tut mir leid."],
+        thanks: "Vielen Dank",
+        wellDone: ["Gut !", "Sehr schön.", "Du möchtest gerne ein Kompliment hören ?", "Du bist etwas ganz Besonderes!", "Super !", "Hurra", "Bravo", "Perfekt", "So gut bist du"],
+        wrong: ["Falsch !", "Falsche Antwort", "Versuchs nochmal.", "Es tut mir leid.", "Nicht richtig", "Ich bin entäuscht", "Frustrierend ! Nächstes ...", "Nächstes Mal wird es besser"],
         tooShort: "zu kurz",
         tooLong: "zu lang",
         notSerious: "Ein bisschen Mühe geben!",

@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+h1,h2,h3 {
+    margin-top:0;
+}
+
+main {
+  font-size: 1.3rem;
+  background-color: #d2d3c8;
+  background: transparent linear-gradient(to bottom, #f5cccc 0%, #ccdddd 100%) repeat scroll 0% 0%;
+}
+
+section {
+    margin-left:2em;
+}
+
+table {
+    border: solid 2px #101044;
+    margin-bottom:1em;
+}
+
+.key-values > tbody > tr > td:first-child:after {
+    content:" -->";
+}

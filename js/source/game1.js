@@ -3,6 +3,7 @@
 const GAME1 = (function () {
     "use strict";
     const L = LANG.de; // L = local lang
+    const hide = UTIL.hide;
     
     let gameOn, // :boolean
         vars = JS99.vars,
@@ -42,8 +43,8 @@ const GAME1 = (function () {
             toDisplay.src = nowImage;
         }
         
-        toDisplay.classList.remove("hide");
-        toHide.classList.add("hide");
+        toDisplay.classList.remove(hide);
+        toHide.classList.add(hide);
         toHide.src = nextImage; //pre load next
     };
     
@@ -102,9 +103,9 @@ const GAME1 = (function () {
             // we remove it from the not finished list
             notFinished = R.remove(R.findIndex(R.eq(dataIndex), notFinished), 1, notFinished);
             if (UTIL.isGameOver(notFinished)) {
-                nodes.game1.classList.add("hide");
+                nodes.game1.classList.add(hide);
                 gameOn = false;
-                UTIL.showTryAgainButton("Vielen Dank");
+                UTIL.showTryAgainButton(L.thanks);
                 
                 vars.feedback = L.gameOver;
                 nodes.progress.value = 1.0;// avoid 0 division error
@@ -115,7 +116,7 @@ const GAME1 = (function () {
     };
     
     const tryAgain = function () {
-        nodes.game1.classList.remove("hide");
+        nodes.game1.classList.remove(hide);
         gameOn = true;
         ratios = R.times(ratio, DATA.length);
         notFinished = R.range(0, DATA.length);
@@ -135,11 +136,14 @@ const GAME1 = (function () {
         //clean input
         let input = UTIL.cleanUserInput(vars.input);
         
-        //does input make sense ?
-        let whyDoesItMakeNoSense = reasonInputNonSense(input);
-        if (whyDoesItMakeNoSense) {
-            vars.feedback = whyDoesItMakeNoSense;
-            return;
+        // let user give up with "?"
+        if (input !== "?") {
+            // does input make sense ?
+            let whyDoesItMakeNoSense = reasonInputNonSense(input);
+            if (whyDoesItMakeNoSense) {
+                vars.feedback = whyDoesItMakeNoSense;
+                return;
+            }
         }
         
         // give feedback and adjust scores

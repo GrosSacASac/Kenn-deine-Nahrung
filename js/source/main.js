@@ -30,13 +30,21 @@
         lastTime = thisTime;
     };
     
+    /* note that keyup is used instead of input event so that the other input event has time to properly update JS99.vars.input */ 
+    const inputHelper = function (event) {
+        JS99.vars.input = UTIL.inputHelper(JS99.vars.input);
+    };
+    
     JS99.tryAgainGame1 = function () {
         changeGame(GAME1);
     };
+    
     JS99.tryAgainGame2 = function () {
         changeGame(GAME2);
     };
+    
     JS99.check = check;
+    JS99.inputHelper = inputHelper;
     DOM99.linkJsAndDom(); //now we listen to events
     UTIL.showTryAgainButton(L.gladToSeeYou);
 }());

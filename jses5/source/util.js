@@ -20,6 +20,9 @@ var UTIL = (function () {
         return R.head(word).toUpperCase() + R.substringFrom(1, word);
     };
 
+    /* by popular demand, see html/about.html */
+    var inputHelper = R.pipe(R.replace(/ae/g, "ä"), R.replace(/ue/g, "ü"), R.replace(/oe/g, "ö"), R.replace(/sss/g, "ß"), R.replace(/AE/g, "Ä"), R.replace(/UE/g, "Ü"), R.replace(/OE/g, "Ö"));
+
     /* returns false if the string contains a character 
      who is present more than half the time*/
     var isDiverse = function isDiverse(input) {
@@ -27,16 +30,13 @@ var UTIL = (function () {
         return max <= R.length(input) / 2;
     };
 
-    var cleanUserInput = function cleanUserInput(UserString) {
-        //perhaps remove other accidental character
-        return R.replace(/[,\.\+]/g, "", R.trim(UserString));
-    };
+    var cleanUserInput = R.pipe(R.replace(/[,\.\+]/g, ""), R.trim()
+    //perhaps remove more other accidental character
+    );
 
-    /* also removes double spaces
+    /* expects a string, also removes double spaces
     only output expected value, with spaces split words*/
-    var capitalize = function capitalize(string1) {
-        return R.pipe(R.split(" "), R.filter(Boolean), R.map(capitalizeWord), R.join(" "))(string1);
-    };
+    var capitalize = R.pipe(R.split(" "), R.filter(Boolean), R.map(capitalizeWord), R.join(" "));
 
     /*
     ----- end of pure functions ------
@@ -82,10 +82,12 @@ var UTIL = (function () {
         capitalize: capitalize,
         isDiverse: isDiverse,
         cleanUserInput: cleanUserInput,
+        inputHelper: inputHelper,
         imgDir: imgDir,
         random: random,
         randomSelect: randomSelect,
         randomSelectMulti: randomSelectMulti,
-        showTryAgainButton: showTryAgainButton
+        showTryAgainButton: showTryAgainButton,
+        hide: "hide"
     });
 })();

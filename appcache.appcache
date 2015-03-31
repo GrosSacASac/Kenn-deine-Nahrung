@@ -1,9 +1,10 @@
 CACHE MANIFEST
-# updating this file will force browser to look for new files 1.5
+# updating this file will force browser to look for new files 1.6
 # all files needed for offline use:
 index.html
 html/about.html
 css/normalize.css
+css/about.css
 css/game.css
 js/libraries/imports/ramda.js
 js/libraries/install.js

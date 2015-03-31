@@ -1,4 +1,4 @@
-images should be 300x300 .jpg
+images should be 400x300 .jpg
 
     /*
     main

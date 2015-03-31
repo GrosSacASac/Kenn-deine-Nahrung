@@ -16,7 +16,18 @@ const UTIL = (function () {
     
     const capitalizeWord = function (word) {
         return R.head(word).toUpperCase() + R.substringFrom(1, word);
-    };
+    };    
+    
+    /* by popular demand, see html/about.html */
+    const inputHelper = R.pipe(
+        R.replace(/ae/g, "ä"),
+        R.replace(/ue/g, "ü"),
+        R.replace(/oe/g, "ö"),
+        R.replace(/sss/g, "ß"),
+        R.replace(/AE/g, "Ä"),
+        R.replace(/UE/g, "Ü"),
+        R.replace(/OE/g, "Ö")
+    );
     
     /* returns false if the string contains a character 
      who is present more than half the time*/
@@ -26,21 +37,20 @@ const UTIL = (function () {
         return max <= R.length(input)/2;
     };
     
-    const cleanUserInput = function (UserString) {
-        //perhaps remove other accidental character
-        return R.replace(/[,\.\+]/g, "", R.trim(UserString));
-    };
+    const cleanUserInput = R.pipe(
+        R.replace(/[,\.\+]/g, ""),
+        R.trim()
+        //perhaps remove more other accidental character
+    );
     
-    /* also removes double spaces
+    /* expects a string, also removes double spaces
     only output expected value, with spaces split words*/
-    const capitalize =  function (string1) {
-        return R.pipe(
-            R.split(" "),
-            R.filter(Boolean),
-            R.map(capitalizeWord),
-            R.join(" ")
-            )(string1);
-    };
+    const capitalize = R.pipe(
+        R.split(" "),
+        R.filter(Boolean),
+        R.map(capitalizeWord),
+        R.join(" ")
+    );
     
     /*
     ----- end of pure functions ------
@@ -87,11 +97,13 @@ const UTIL = (function () {
         capitalize,
         isDiverse,
         cleanUserInput,
+        inputHelper,
         imgDir,
         random,
         randomSelect,
         randomSelectMulti,
-        showTryAgainButton
+        showTryAgainButton,
+        hide: "hide"
     });
 }());
 

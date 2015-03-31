@@ -26,6 +26,18 @@ describe("We are testing util.js", function() {
         }, ["user.input", " messy whiteSpace  ", "+answer,", "boo"]);
     });
   
+    it('inputHelper', function() {
+        var inputs,inputs2, f=UTIL.inputHelper;
+        inputs = ["ae","ue","oe","sss","AE","UE","OE","Suessskartoffel"];
+        inputs2 = ["ä","ü", "ö", "ß",  "Ä", "Ü", "Ö", "Süßkartoffel"];
+        R.pipe(
+            R.zip,
+            R.forEach(function (pair) {
+                expect(f(pair[0])).toBe(pair[1]);
+            })
+        )(inputs, inputs2);
+    });
+  
     it('random', function() {
         var r;
         R.forEach(function (i) {

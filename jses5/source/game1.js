@@ -5,6 +5,7 @@
 var GAME1 = (function () {
     "use strict";
     var L = LANG.de; // L = local lang
+    var hide = UTIL.hide;
 
     var gameOn = undefined,
         // :boolean
@@ -47,8 +48,8 @@ var GAME1 = (function () {
             toDisplay.src = nowImage;
         }
 
-        toDisplay.classList.remove("hide");
-        toHide.classList.add("hide");
+        toDisplay.classList.remove(hide);
+        toHide.classList.add(hide);
         toHide.src = nextImage; //pre load next
     };
 
@@ -106,9 +107,9 @@ var GAME1 = (function () {
             // we remove it from the not finished list
             notFinished = R.remove(R.findIndex(R.eq(dataIndex), notFinished), 1, notFinished);
             if (UTIL.isGameOver(notFinished)) {
-                nodes.game1.classList.add("hide");
+                nodes.game1.classList.add(hide);
                 gameOn = false;
-                UTIL.showTryAgainButton("Vielen Dank");
+                UTIL.showTryAgainButton(L.thanks);
 
                 vars.feedback = L.gameOver;
                 nodes.progress.value = 1; // avoid 0 division error
@@ -119,7 +120,7 @@ var GAME1 = (function () {
     };
 
     var tryAgain = function tryAgain() {
-        nodes.game1.classList.remove("hide");
+        nodes.game1.classList.remove(hide);
         gameOn = true;
         ratios = R.times(ratio, DATA.length);
         notFinished = R.range(0, DATA.length);
@@ -139,11 +140,14 @@ var GAME1 = (function () {
         //clean input
         var input = UTIL.cleanUserInput(vars.input);
 
-        //does input make sense ?
-        var whyDoesItMakeNoSense = reasonInputNonSense(input);
-        if (whyDoesItMakeNoSense) {
-            vars.feedback = whyDoesItMakeNoSense;
-            return;
+        // let user give up with "?"
+        if (input !== "?") {
+            // does input make sense ?
+            var whyDoesItMakeNoSense = reasonInputNonSense(input);
+            if (whyDoesItMakeNoSense) {
+                vars.feedback = whyDoesItMakeNoSense;
+                return;
+            }
         }
 
         // give feedback and adjust scores

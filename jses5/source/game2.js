@@ -7,6 +7,7 @@ var GAME2 = (function () {
 
     var L = LANG.de; // L = local lang
     var numberOfImages = 4;
+    var hide = UTIL.hide;
 
     var gameOn = undefined,
         // :boolean
@@ -56,7 +57,7 @@ var GAME2 = (function () {
 
         //make sure all images are visible
         R.times(function (i) {
-            nodes[i].classList.remove("hide");
+            nodes[i].classList.remove(hide);
         }, numberOfImages);
 
         //display the new word
@@ -64,7 +65,7 @@ var GAME2 = (function () {
     };
 
     var tryAgain = function tryAgain() {
-        nodes.game2.classList.remove("hide");
+        nodes.game2.classList.remove(hide);
         gameOn = true;
         pause = false;
         ratios = R.times(ratio, DATA.length);
@@ -88,7 +89,7 @@ var GAME2 = (function () {
             pause = true;
             R.times(function (i) {
                 if (i !== correctAnswer) {
-                    nodes[i].classList.add("hide");
+                    nodes[i].classList.add(hide);
                 }
             }, numberOfImages);
             output.feedback = "" + UTIL.randomSelect(L.wrong) + " " + L.thisWasTheRightImage + " " + L["for"] + " " + UTIL.capitalize(DATA[dataIndex].name);
@@ -101,9 +102,9 @@ var GAME2 = (function () {
             // remove it from the not finished list
             notFinished = R.remove(R.findIndex(R.eq(dataIndex), notFinished), 1, notFinished);
             if (UTIL.isGameOver(notFinished)) {
-                nodes.game2.classList.add("hide");
+                nodes.game2.classList.add(hide);
                 gameOn = false;
-                UTIL.showTryAgainButton("Vielen Dank");
+                UTIL.showTryAgainButton(L.thanks);
 
                 output.feedback = L.gameOver;
                 nodes.progress.value = 1; // avoid 0 division error
