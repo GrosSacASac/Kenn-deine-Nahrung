@@ -86,6 +86,7 @@ var GAME2 = (function () {
             ratios[dataIndex][0] += 1;
         } else {
             /*hide everything EXCEPT right answer until a new click occurs*/
+            navigator.vibrate(500);
             pause = true;
             R.times(function (i) {
                 if (i !== correctAnswer) {
