@@ -1,6 +1,6 @@
 #Kenn deine Nahrung
 
-[Try it in the browser](http://grossacasac.github.io/Kenn-deine-Nahrung/)
+[Try it in the browser](https://grossacasac.github.io/Kenn-deine-Nahrung/)
 
 I started with this set-up: https://github.com/GrosSacASac/JavaScript-Set-Up
 
