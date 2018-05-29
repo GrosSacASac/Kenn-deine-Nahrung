@@ -1,11 +1,11 @@
-#Obst game
+# Obst game
 
-##Goal
+## Goal
 
 Learn to write. Focus on food. First Version will be in German only.
 For people who want richer vocabulary, who are able to read basic instructions. Communication is an essential skill in life.
 
-##How
+## How
 
 Computer game with random question and feedback.
 
