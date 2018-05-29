@@ -1,5 +1,5 @@
 {
-    "version": "1.0",
+    "version": "1.1",
     "name": "Kenn Nahrung",
     "short_name": "Nahrung",
     "description": "Ein Spiel um Nahrungswörter zu lernen",
@@ -14,7 +14,7 @@
         "150": "/Kenn-deine-Nahrung/images/icons/150.png",
         "256": "/Kenn-deine-Nahrung/images/icons/256.png",
         "512": "/Kenn-deine-Nahrung/images/icons/512.png"
-    }, 
+    },
     "developer": {
         "name": "Walle Cyril",
         "url": "https://github.com/GrosSacASac"

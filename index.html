@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>Kenn deine Nahrung</title>
-    
+
     <!-- style -->
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/game.css">
     <link rel="icon" href="images/icons/16.png">
-    
+
     <!-- install -->
     <link rel="manifest" href="manifest.webapp">
     <meta name="msapplication-TileColor" content="#123456">
@@ -17,7 +17,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <!-- <script src="js/libraries/install.js"></script> -->
-    
+
     <!-- preload -->
     <link rel="prerender" href="html/about.html">
 </head>
@@ -26,7 +26,7 @@
 
     <main>
         <noscript><p>Sie müssen JavaScript zulassen um zu spielen.</p></noscript>
-        
+
         <div data-99-node="tryAgain" class="intro">
             <h1>Kenn deine Nahrungsmittel</h1>
             <p data-99-node="tryAgainText"></p>
@@ -35,40 +35,39 @@
                 <li><button data-99-bind="click-tryAgainGame1">Schreib den passenden Word zum Bild</button></li>
                 <li><button data-99-bind="click-tryAgainGame2">Wähle das passende Bild fürs Wort (Ideal für Smartphones)</button></li>
             </ul>
-            <a title="A propos" href="html/about.html" target="_blank" rel="next">[Hilfe]</a>
         </div>
 
-        <section id="game1" class="hide" data-99-bind="keypress-check" data-99-node="game1">            
+        <section id="game1" class="hide" data-99-bind="keypress-check" data-99-node="game1">
             <section id="question">
                 <label for="input">
                     <img class="foodImage gimg" data-99-node="foodImage" src="" alt="">
                     <img class="foodImage hide gimg" data-99-node="foodImageBis" src="" alt="">
                 </label>
             </section>
-            
+
             <section id="input-zone">
                 <input data-99-var="input"
                        data-99-node="input"
                        data-99-bind="input-inputHelper"
                        id="input"
                        type="text" autocomplete="off"
-                       inputmode="full-width-latin" 
+                       inputmode="full-width-latin"
                        maxlength="100" minlength="2"
                        placeholder="Wie nennst du dieses Essen ? Neue Zeile um zu bestätigen"
                        spellcheck="false"
                 >
                 <button class="hide" data-99-bind="click-check">Check</button>
             </section>
-            
+
         </section>
-        
+
         <section id="game2" class="hide" data-99-node="game2">
             <section id="question2">
                 <strong>
                     <span data-99-var="word"></span> ?
                 </strong>
             </section>
-            
+
             <section id="chooseImage" data-99-bind="click-check">
                 <img id="0" data-99-node="0" class="gimg" src="" alt="">
                 <img id="1" data-99-node="1" class="gimg" src="" alt="">
@@ -76,7 +75,7 @@
                 <img id="3" data-99-node="3" class="gimg" src="" alt="">
             </section>
         </section>
-        
+
         <section id="feedback">
             <p>
                 <strong><output title="Bewertung" data-99-var="feedback"></output></strong>
@@ -84,13 +83,13 @@
 
             <progress data-99-node="progress" value="0" max="1" class=""></progress>
         </section>
-        
+
     </main>
-    
+
     <aside>
-        <a title="A propos" href="html/about.html" target="_blank" rel="next">[Hilfe]</a>
+        <a title="A propos" href="html/about.html" rel="next">[Hilfe]</a>
     </aside>
-    
+
 <!-- imported libraries -->
 <script src="js/libraries/imports/ramda.js"></script>
 
@@ -102,7 +101,7 @@
 <!-- data -->
 <script src="jses5/data/data.js"></script>
 
-<!-- config 
+<!-- config
 <script src="jses5/config/xxx.js"></script>-->
 
 <!-- programm -->
