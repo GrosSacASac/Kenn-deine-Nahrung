@@ -1,0 +1,7 @@
+{
+  "name": "kenn-deine-nahrung",
+  "version": "1.0.0",
+  "dependencies": {
+    "qlearn": "^3.1.1"
+  }
+}
