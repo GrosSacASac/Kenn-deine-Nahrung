@@ -1,11 +1,11 @@
 "use strict";
 
-var JS99 = (function () {
+var JS99 = function () {
   "use strict";
+
   var vars = {},
       varListeners = {},
       nodes = {};
-
   /* 
     define your event Listener here.
     You can use vars and nodes
@@ -30,5 +30,6 @@ var JS99 = (function () {
   return {
     vars: vars,
     varListeners: varListeners,
-    nodes: nodes };
-})();
+    nodes: nodes
+  };
+}();
